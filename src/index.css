@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Child-friendly pastel palette */
+    --background: 270 50% 98%;
+    --foreground: 270 30% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 30% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 30% 25%;
+
+    /* Soft lavender primary */
+    --primary: 270 60% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Mint secondary */
+    --secondary: 160 50% 85%;
+    --secondary-foreground: 160 40% 25%;
+
+    /* Soft peach muted */
+    --muted: 30 60% 92%;
+    --muted-foreground: 30 30% 40%;
+
+    /* Sky blue accent */
+    --accent: 200 70% 80%;
+    --accent-foreground: 200 50% 25%;
+
+    /* Gentle coral for errors (not scary red) */
+    --destructive: 15 70% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success green */
+    --success: 140 60% 55%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning yellow/orange */
+    --warning: 40 90% 65%;
+    --warning-foreground: 40 80% 20%;
+
+    --border: 270 30% 88%;
+    --input: 270 30% 92%;
+    --ring: 270 60% 70%;
+
+    --radius: 1rem;
+
+    /* Camera panel */
+    --camera-bg: 200 60% 95%;
+    --camera-border: 200 50% 80%;
+
+    /* Letter bubble colors */
+    --bubble-1: 340 70% 85%;
+    --bubble-2: 200 70% 85%;
+    --bubble-3: 140 60% 85%;
+    --bubble-4: 30 80% 85%;
+    --bubble-5: 270 60% 85%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 270 30% 12%;
+    --foreground: 270 20% 95%;
+
+    --card: 270 30% 15%;
+    --card-foreground: 270 20% 95%;
+
+    --popover: 270 30% 15%;
+    --popover-foreground: 270 20% 95%;
+
+    --primary: 270 50% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 40% 30%;
+    --secondary-foreground: 160 30% 90%;
+
+    --muted: 270 20% 20%;
+    --muted-foreground: 270 15% 65%;
+
+    --accent: 200 50% 35%;
+    --accent-foreground: 200 30% 95%;
+
+    --destructive: 15 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 140 50% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 40 70% 50%;
+    --warning-foreground: 40 80% 95%;
+
+    --border: 270 20% 25%;
+    --input: 270 20% 25%;
+    --ring: 270 50% 60%;
+
+    --camera-bg: 200 30% 15%;
+    --camera-border: 200 30% 30%;
+
+    --bubble-1: 340 50% 40%;
+    --bubble-2: 200 50% 40%;
+    --bubble-3: 140 40% 40%;
+    --bubble-4: 30 60% 45%;
+    --bubble-5: 270 40% 45%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bubble-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--bubble-1)) 0%,
+      hsl(var(--bubble-2)) 25%,
+      hsl(var(--bubble-3)) 50%,
+      hsl(var(--bubble-4)) 75%,
+      hsl(var(--bubble-5)) 100%
+    );
+  }
+}
